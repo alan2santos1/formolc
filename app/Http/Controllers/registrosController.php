@@ -167,7 +167,7 @@ class registrosController extends Controller
 
         $registro = registro::findOrFail($id);
         //linea de eliminar foto antigua al actualizar 
-        Storage::delete('public');
+        Storage::delete('public/'.$registro->Foto);
         $registro->update($requestData);
 
         return redirect('registros')->with('flash_message', 'registro updated!');
