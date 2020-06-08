@@ -3,13 +3,15 @@
 
 <select id="options" class="selectValor">
     <option value="" >Choose:</option>
-    <option value="1" class="formularios">1</option>
+    <option value="1" class="formularios">TAEKWONDO</option>
     <option value="2" class="formularios">2</option>
     <option value="3">3</option>
 </select>
 
 <div class="option selectValor" id="option-1">
-    <p>Content for option #1</p>
+    <option>Blancas-Amarillas</option>
+    <option>Verdes-Azules</option>
+    <option>Rojas-Negras</option>
 </div>
 <div class="option selectValor" id="option-2">
     <p>Content for option #2</p>
@@ -42,9 +44,9 @@
     <div class="col-md-6 mb-3">
         <label for="validationCustom03">DEPORTE:</label>
         <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="ChangecatList()" required>
-          <option value="">Choose... </option>
-          <option value="Selecciona deporte">Selecciona deporte</option>
-          <option value="Curriculum Development and Alignment">Curriculum Development and Alignment</option>
+          <option value="">SELECCIONA DEPORTE </option>
+          <option value="Ajedrez">Ajedrez</option>
+          <option value="Atetismo">Atletismo</option>
           <option value="District Committee">District Committee</option>
           <option value="Meeting">Meeting</option>
           <option value="Other Category">Other Category</option>
@@ -57,7 +59,7 @@
       </div>
     </div>
     <div class="col-md-6 mb-3">
-        <label for="validationCustom04">Activity:</label>
+        <label for="validationCustom04">Modalidad:</label>
        <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
       <div class="invalid-feedback">
           Please provide an activity.
@@ -244,15 +246,15 @@
 </div>
 
 {{-- DEPORTE --}}
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="Deporte" class="control-label">{{ 'Deporte' }}</label>
     <select name="Deporte" class="form-control" id="Deporte" >
-    @foreach (json_decode('{"SELECCIONE":"Seleccione_Deporte", "AJEDREZ":"Ajedrez", "ATLETISMO":"Atletismo", "BALONCESTO":"Baloncesto", "BALONCESTO3x3":"Baloncesto3x3","BEISBOL":"Beisbol", "BOXEO":"Boxeo", "CICLISMO":"Ciclismo", "FUTBOL5x5":"Futbol5x5", "FUTBOLASOCIACION":"Futbol_Asociacion", "SOFTBOL":"Softbol", "TAEKWONDO":"Taekwondo","VOLEIBOL":"Voleibol"}', true) as $optionKey => $optionValue)
+    @foreach (json_decode('{"SELECCIONE":"Seleccione Deporte", "AJEDREZ":"Ajedrez", "ATLETISMO":"Atletismo", "BALONCESTO":"Baloncesto", "BALONCESTO3x3":"Baloncesto3x3","BEISBOL":"Beisbol", "BOXEO":"Boxeo", "CICLISMO":"Ciclismo", "FUTBOL5x5":"Futbol5x5", "FUTBOLASOCIACION":"Futbol_Asociacion", "SOFTBOL":"Softbol", "TAEKWONDO":"Taekwondo","VOLEIBOL":"Voleibol"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($registro->Deporte) && $registro->Deporte == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
+</div> --}}
 
 {{-- RAMA --}}
 <div class="form-group {{ $errors->has('Rama') ? 'has-error' : ''}}">
@@ -305,9 +307,9 @@
 
 {{-- CINTAS TAEKWONDO --}}
 <div class="form-group {{ $errors->has('CintasTae') ? 'has-error' : ''}}">
-    <label for="CintasTae" class="control-label">{{ 'Cintastae' }}</label>
+    <label for="CintasTae" class="control-label">{{ 'Cintas' }}</label>
     <select name="CintasTae" class="form-control" id="CintasTae" >
-    @foreach (json_decode('{"BlANCASAM":"Blancas_Amarillas", "VERDESAZULES":"Verdes_Azules", "ROJASNEGRAS":"Rojas_Negras"}', true) as $optionKey => $optionValue)
+    @foreach (json_decode('{"Seleccione_cintas":"Seleccione cinta", "BlANCASAM":"Blancas-Amarillas", "VERDESAZULES":"Verdes-Azules", "ROJASNEGRAS":"Rojas-Negras"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($registro->CintasTae) && $registro->CintasTae == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach
 </select>

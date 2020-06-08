@@ -7,13 +7,11 @@ $(document).ready(function() {
         $(SelectValue).toggle();
     });
 });
-
-//NO SE
 $('#options').on('change', function (e) {
     $('.option').hide();
     $('#option-' + e.target.value).show();
 });
-//TERMINA NO SE 
+//TERMINA 
 
 
 //CALCULAR EDAD
@@ -46,7 +44,8 @@ function mifuncion() {
 
 
 var catAndActs = {};
-catAndActs['Selecciona deporte'] = ['Assessment Day', 'Common Assessment Development', 'Data Team', 'Kindergarten Screening', 'Other'];
+catAndActs['Ajedrez'] = ['Individual', 'Mixto'];
+catAndActs['Atetismo'] = ['Salto de longitud', 'Relevo Mixto', '100 metros'];
 catAndActs['Curriculum Development and Alignment'] = ['Capstone Development', 'Course Of Study Development / Revision', 'Standards Alignment / Rollout', 'Other'];
 catAndActs['District Committee'] = ['Curriculum Council', 'Grading & Assessment Task Force', 'Professional Development Planning Committee', 'Race To The Top Committee', 'Teacher Evaluation Committee', 'Other'];
 catAndActs['Meeting'] = ['Academic Support Team', 'ELL / eKLIP Teachers', 'Gifted Intervention Specialist', 'Intervention Assistance Team', 'Intervention Teachers', 'Kindergarten Parent Conference', 'KLIP Teachers', 'Title I Teachers', 'Other'];
@@ -71,3 +70,4 @@ function ChangecatList() {
         }
     }
 } 
+//TERMINA SELECT DINAMICO BOOTSTRAP 
