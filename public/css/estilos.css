@@ -1,0 +1,8 @@
+.formularios{
+    color: pink;
+}
+
+/* Mostrar o esconder algun div */
+.Div1,.Div2,.Div3{
+    display:none ;
+}
