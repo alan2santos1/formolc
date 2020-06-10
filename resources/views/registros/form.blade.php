@@ -40,6 +40,64 @@
 
 {{-- SELECT DINAMICO --}}
 
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
+    <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div>
+
+{{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
+   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
+  <div class="invalid-feedback">
+      Please provide an activity.
+  </div>
+  {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> --}}
+
+<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+    <label for="validationCustom03" class="control-label">{{ 'Deporte' }}</label>
+    <select class="form-control form-control-lg" name="Deporte" id="validationCustom03" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
+        <option value="">SELECCIONA DEPORTE </option>
+        <option value="Ajedrez">Ajedrez</option>
+        <option value="Atetismo">Atletismo</option>
+        <option value="District Committee">District Committee</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Other Category">Other Category</option>
+        <option value="Professional Conference">Professional Conference</option>
+        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
+        <option value="Pupil Services">Pupil Services</option>
+      </select>
+    <div class="invalid-feedback">
+         proporciona una Categoria.
+    </div>
+</select>
+    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
+</div>
+
+{{--  <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
+   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
+  <div class="invalid-feedback">
+      Please provide an activity.
+  </div>
+  {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> --}}
+
+{{-- comment --}}
+{{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="validationCustom04">{{ 'Modalidad' }}</label>
+    <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
+</div>
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div>
+</div> --}}
+
+{{-- comment --}}
+
+{{-- SELECT DINAMICO ORIGINAL --}}
+
+{{-- 
 <div class="row">
     <div class="col-md-6 mb-3">
         <label for="validationCustom03">DEPORTE:</label>
@@ -67,6 +125,10 @@
     </div>
   </div>
 
+ --}}
+{{-- TERMINA SELECT ORIGINAL --}}
+
+  
 
   {{-- termina prueba --}}
 
@@ -268,7 +330,7 @@
 </div>
 
 {{-- MODALIDAD --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+{{--  <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <div class="radio">
     <label><input name="Modalidad" type="radio" value="1" {{ (isset($registro) && 1 == $registro->Modalidad) ? 'checked' : '' }}> Si</label>
@@ -277,7 +339,7 @@
     <label><input name="Modalidad" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->Modalidad) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>
+</div>  --}}
 
 {{-- CATEGORÍA --}}
 <div class="form-group {{ $errors->has('Categoria') ? 'has-error' : ''}}">
