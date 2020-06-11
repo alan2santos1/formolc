@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('registros', 'registrosController');
+Route::resource('registros1', 'registros1Controller');

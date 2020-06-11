@@ -7,6 +7,10 @@ $(document).ready(function() {
         $(SelectValue).toggle();
     });
 });
+//TERMINA 
+
+
+//EMPIEZA ESCONDER O MOSTRAR DIV
 $('#options').on('change', function (e) {
     $('.option').hide();
     $('#option-' + e.target.value).show();
@@ -71,3 +75,36 @@ function ChangecatList() {
     }
 } 
 //TERMINA SELECT DINAMICO BOOTSTRAP 
+
+
+//
+$('#deportes1').on('change', function (e) {
+    $('.deporte1').hide();
+    $('#deporte1-' + e.target.value).show();
+});
+
+//
+
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+
+//
+/* 
+$(function() {
+    $('#colorselector').change(function(){
+      $('.colors').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+ */

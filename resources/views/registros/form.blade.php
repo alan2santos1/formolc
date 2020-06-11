@@ -1,24 +1,29 @@
 {{-- prueba --}}
+{{-- <div class="form-group  Container {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+    <label for="Deporte" class="control-label">{{ 'Deporte' }}</label>
+    <form action="#">
+    <select class="form-control form-control-lg" name="SelectOptions" id="SelectOptions" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
+        <option value="">SELECCIONA DEPORTE </option>
+        <option value="Div1">Ajedrez</option>
+        <option value="Atetismo">Atletismo</option>
+        <option value="District Committee">District Committee</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Other Category">Other Category</option>
+        <option value="Professional Conference">Professional Conference</option>
+        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
+        <option value="Pupil Services">Pupil Services</option>
+      </select>
+    </form>
+</select>
+    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
+    
+</div> --}}
+
+
+
 {{-- MOSTRAR O ESCONDER DIV --}}
 
-<select id="options" class="selectValor">
-    <option value="" >Choose:</option>
-    <option value="1" class="formularios">TAEKWONDO</option>
-    <option value="2" class="formularios">2</option>
-    <option value="3">3</option>
-</select>
 
-<div class="option selectValor" id="option-1">
-    <option>Blancas-Amarillas</option>
-    <option>Verdes-Azules</option>
-    <option>Rojas-Negras</option>
-</div>
-<div class="option selectValor" id="option-2">
-    <p>Content for option #2</p>
-</div>
-<div class="option" id="option-3">
-    <p>Content for option #3</p>
-</div>
 {{-- TERMINA MOSTRAR O ESCONDER --}}
 
 
@@ -36,15 +41,14 @@
   </div>  --}}
 
 
-<br><br><br>
-
 {{-- SELECT DINAMICO --}}
+{{-- EMPIEZA CÓDIGO DE DEPORTES Y MODALIDAD DE PRUEBA --}}
 
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+{{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
     <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>
+</div> --}}
 
 {{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
@@ -55,7 +59,7 @@
   {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
 </div> --}}
 
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="validationCustom03" class="control-label">{{ 'Deporte' }}</label>
     <select class="form-control form-control-lg" name="Deporte" id="validationCustom03" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
         <option value="">SELECCIONA DEPORTE </option>
@@ -70,10 +74,11 @@
       </select>
     <div class="invalid-feedback">
          proporciona una Categoria.
-    </div>
+    </div> 
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
+</div> --}}
+{{-- TERMINA CÓDIGO DE DEPORTES Y MODALIDAD DE PRUEBA --}}
 
 {{--  <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
@@ -308,7 +313,7 @@
 </div>
 
 {{-- DEPORTE --}}
-{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="Deporte" class="control-label">{{ 'Deporte' }}</label>
     <select name="Deporte" class="form-control" id="Deporte" >
     @foreach (json_decode('{"SELECCIONE":"Seleccione Deporte", "AJEDREZ":"Ajedrez", "ATLETISMO":"Atletismo", "BALONCESTO":"Baloncesto", "BALONCESTO3x3":"Baloncesto3x3","BEISBOL":"Beisbol", "BOXEO":"Boxeo", "CICLISMO":"Ciclismo", "FUTBOL5x5":"Futbol5x5", "FUTBOLASOCIACION":"Futbol_Asociacion", "SOFTBOL":"Softbol", "TAEKWONDO":"Taekwondo","VOLEIBOL":"Voleibol"}', true) as $optionKey => $optionValue)
@@ -316,7 +321,7 @@
     @endforeach
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div> --}}
+</div>
 
 {{-- RAMA --}}
 <div class="form-group {{ $errors->has('Rama') ? 'has-error' : ''}}">
@@ -330,7 +335,7 @@
 </div>
 
 {{-- MODALIDAD --}}
-{{--  <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <div class="radio">
     <label><input name="Modalidad" type="radio" value="1" {{ (isset($registro) && 1 == $registro->Modalidad) ? 'checked' : '' }}> Si</label>
@@ -339,7 +344,7 @@
     <label><input name="Modalidad" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->Modalidad) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>  --}}
+</div> 
 
 {{-- CATEGORÍA --}}
 <div class="form-group {{ $errors->has('Categoria') ? 'has-error' : ''}}">
@@ -350,12 +355,12 @@
 
 {{-- CAPITÁN --}}
 <div class="form-group {{ $errors->has('Capitan') ? 'has-error' : ''}}">
-    <label for="Capitan" class="control-label">{{ 'Capitan' }}</label>
+    <label for="Capitan" class="control-label">{{ 'Capitán' }}</label>
     <div class="radio">
-    <label><input name="Capitan" type="radio" value="1" {{ (isset($registro) && 1 == $registro->Capitan) ? 'checked' : '' }}> Si</label>
+    <label><input name="Capitan" type="radio" value="Si" {{ (isset($registro) && 1 == $registro->Capitan) ? 'checked' : '' }}> Si</label>
 </div>
 <div class="radio">
-    <label><input name="Capitan" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->Capitan) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
+    <label><input name="Capitan" type="radio" value="No" @if (isset($registro)) {{ (0 == $registro->Capitan) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('Capitan', '<p class="help-block">:message</p>') !!}
 </div>
@@ -408,13 +413,13 @@
 <div class="form-group {{ $errors->has('EstadoDeSalud') ? 'has-error' : ''}}">
     <label for="EstadoDeSalud" class="control-label">{{ 'Estado de salud' }}</label>
     <div class="radio">
-    <label><input name="EstadoDeSalud" type="radio" value="1" {{ (isset($registro) && 1 == $registro->EstadoDeSalud) ? 'checked' : '' }}> Bueno</label>
+    <label><input name="EstadoDeSalud" type="radio" value="Bueno" {{ (isset($registro) && 1 == $registro->EstadoDeSalud) ? 'checked' : '' }}> Bueno</label>
 </div>
 <div class="radio">
-    <label><input name="EstadoDeSalud" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->EstadoDeSalud) ? 'checked' : '' }} @else {{ 'checked' }} @endif> Malo</label>
+    <label><input name="EstadoDeSalud" type="radio" value="Malo" @if (isset($registro)) {{ (0 == $registro->EstadoDeSalud) ? 'checked' : '' }} @else {{ 'checked' }} @endif> Malo</label>
 </div>
 <div class="radio">
-    <label><input name="EstadoDeSalud" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->EstadoDeSalud) ? 'checked' : '' }} @else {{ 'checked' }} @endif> Regular</label>
+    <label><input name="EstadoDeSalud" type="radio" value="Regular" @if (isset($registro)) {{ (0 == $registro->EstadoDeSalud) ? 'checked' : '' }} @else {{ 'checked' }} @endif> Regular</label>
 </div>
 
     {!! $errors->first('EstadoDeSalud', '<p class="help-block">:message</p>') !!}
@@ -425,10 +430,10 @@
 <div class="form-group {{ $errors->has('PadeceEnfermedad') ? 'has-error' : ''}}">
     <label for="PadeceEnfermedad" class="control-label">{{ '¿Padece alguna enfermedad?' }}</label>
     <div class="radio">
-    <label><input name="PadeceEnfermedad" type="radio" value="1" {{ (isset($registro) && 1 == $registro->PadeceEnfermedad) ? 'checked' : '' }}> Si</label>
+    <label><input name="PadeceEnfermedad" type="radio" value="Si" {{ (isset($registro) && 1 == $registro->PadeceEnfermedad) ? 'checked' : '' }}> Si</label>
 </div>
 <div class="radio">
-    <label><input name="PadeceEnfermedad" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->PadeceEnfermedad) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
+    <label><input name="PadeceEnfermedad" type="radio" value="No" @if (isset($registro)) {{ (0 == $registro->PadeceEnfermedad) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('PadeceEnfermedad', '<p class="help-block">:message</p>') !!}
 </div>
@@ -457,10 +462,10 @@
 <div class="form-group {{ $errors->has('Fuma') ? 'has-error' : ''}}">
     <label for="Fuma" class="control-label">{{ '¿Fuma?' }}</label>
     <div class="radio">
-    <label><input name="Fuma" type="radio" value="1" {{ (isset($registro) && 1 == $registro->Fuma) ? 'checked' : '' }}> Si</label>
+    <label><input name="Fuma" type="radio" value="Si" {{ (isset($registro) && 1 == $registro->Fuma) ? 'checked' : '' }}> Si</label>
 </div>
 <div class="radio">
-    <label><input name="Fuma" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->Fuma) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
+    <label><input name="Fuma" type="radio" value="No" @if (isset($registro)) {{ (0 == $registro->Fuma) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('Fuma', '<p class="help-block">:message</p>') !!}
 </div>

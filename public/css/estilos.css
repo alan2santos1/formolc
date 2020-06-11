@@ -3,6 +3,22 @@
 }
 
 /* Mostrar o esconder algun div */
-.Div1,.Div2,.Div3{
+.Div1,.Div2,.Div3,.Ajedrez,.Atetismo{
     display:none ;
+}  
+
+
+/* Mostrar o esconder algun div */
+
+.box{
+    color: #fff;
+    padding: 20px;
+    display: none;
+    margin-top: 20px;
 }
+.red{ background: #ff0000; }
+.green{ background: #228B22; }
+.blue{ background: #0000ff; }
+
+
+   
