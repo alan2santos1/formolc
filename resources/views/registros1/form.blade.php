@@ -1,3 +1,82 @@
+
+
+<br><br>
+
+    {{-- Deportes --}}
+    
+<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+    <label for="cambiar" class="control-label">{{ ' Selec Deporte' }}</label>
+    <select class="form-control form-control-lg" name="Deporte" id="cambiar" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
+        <option value="Deporte">DEPORTE </option>
+        <option value="Ajedrez">Ajedrez</option>
+        <option value="Atletismo">Atletismo</option>
+        <option value="Futbol5x5">Futbol 5x5</option>
+        <option value="Voleibol">Voleibol</option>
+        <option value="Other Category">Other Category</option>
+        <option value="Professional Conference">Professional Conference</option>
+        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
+        <option value="Pupil Services">Pupil Services</option>
+      </select>
+    <div class="invalid-feedback">
+         proporciona una Categoria.
+    </div>
+</select> 
+    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
+</div> 
+
+{{-- Ajedrez --}}
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv0" style="display:none">
+    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="cambiar" class="form-control" id="cambiar" >
+        <option value="Individual" >Individual</option>
+        <option value="Equipo Mixto" >Equipo Mixto</option>
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div>  
+
+{{-- Atletismo --}}
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="" style="display:none">
+    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="cambiar" class="form-control" id="cambiar" >
+        <option value="Velocidad" >Velocidad</option>
+        <option value="Salto sin impulso" >Salto sin impulso</option>
+        <option value="Relevo Mixto" >Relevo Mixto</option>
+
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div>
+
+{{-- Fut5x5 --}}
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv2" style="display:none">
+    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="cambiar" class="form-control" id="cambiar" >
+        <option value="Femenil" >Femenil</option>
+        <option value="Varonil" >Varonil</option>
+        <option value=" Mixto" >Mixto</option>
+
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div>
+
+{{-- Voleibol --}}
+<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv3" style="display:none">
+    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="cambiar" class="form-control" id="cambiar" >
+        <option value="Femenil" >Femenil1</option>
+        <option value="Varonil" >Varonil1</option>
+        <option value=" Mixto" >Mixto1</option>
+
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> 
+
+   {{--  <div id="apDiv0" style="display:none">div0</div>
+    <div id="apDiv3" style="display:none">div1</div>
+    <div id="apDiv3" style="display:none">div2</div>
+    <div id="apDiv3" style="display:none">div3</div> --}}
+
+
+
 {{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
     <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
@@ -54,14 +133,17 @@
   {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
 </div> --}}
 
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+
+{{-- deporte y modalidad funcional --}}
+
+{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="" class="control-label">{{ 'Deporte' }}</label>
     <select class="form-control form-control-lg" name="Deporte" id="" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
         <option value="">SELECCIONA DEPORTE </option>
         <option value="red">Ajedrez</option>
-        <option value="green">Atletismo</option>
+        <option value="atletismo">Atletismo</option>
         <option value="blue">TAEKWONDO</option>
-        <option value="Meeting">Meeting</option>
+        <option value="atletismo1">prueba</option>
         <option value="Other Category">Other Category</option>
         <option value="Professional Conference">Professional Conference</option>
         <option value="Professional Workshop / Training">Professional Workshop / Training</option>
@@ -75,13 +157,26 @@
 </div>
 <div class="form-group red box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
-    <select multiple name="Modalidad" class="form-control" id="Modalidad" >
+    <select name="Modalidad" class="form-control" id="Modalidad" >
         <option value="red" >azul</option>
         <option value="red" >verde</option>
         <option value="red" >rojas</option>
+        <option value="red" >Cintas negras</option>
+
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> 
+ --}}{{-- Ateltismo --}}
+{{-- <div class="form-group atletismo Relevos _100Metros _400Metros box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
+    <select  multiple class="form-control" >
+        <option value="Relevos" >Relevos</option>
+        <option value="_100Metros" >100Metros</option>
+        <option value="_400Metros" >400Metros</option>
 </select>
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
 </div> 
+ --}}{{-- Termina deporte funcional --}}
 
 {{-- <div>
     <select>

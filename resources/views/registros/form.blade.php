@@ -1,139 +1,5 @@
-{{-- prueba --}}
-{{-- <div class="form-group  Container {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="Deporte" class="control-label">{{ 'Deporte' }}</label>
-    <form action="#">
-    <select class="form-control form-control-lg" name="SelectOptions" id="SelectOptions" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
-        <option value="">SELECCIONA DEPORTE </option>
-        <option value="Div1">Ajedrez</option>
-        <option value="Atetismo">Atletismo</option>
-        <option value="District Committee">District Committee</option>
-        <option value="Meeting">Meeting</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    </form>
-</select>
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-    
-</div> --}}
+{{-- DEPORTE --}}
 
-
-
-{{-- MOSTRAR O ESCONDER DIV --}}
-
-
-{{-- TERMINA MOSTRAR O ESCONDER --}}
-
-
-{{-- cumpleaños --}}
-
-
-{{-- <div class="row">
-    <div class="col-md-4">
-      <input type="date" name="" id="birthday" value="">
-      </div>
-    <div class="col-md-4">
-    <input type="text" name="" id="age" value="">
-    </div>
-  <br><br>
-  </div>  --}}
-
-
-{{-- SELECT DINAMICO --}}
-{{-- EMPIEZA CÓDIGO DE DEPORTES Y MODALIDAD DE PRUEBA --}}
-
-{{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
-    <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> --}}
-
-{{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
-   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
-  <div class="invalid-feedback">
-      Please provide an activity.
-  </div>
-  {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> --}}
-
-{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="validationCustom03" class="control-label">{{ 'Deporte' }}</label>
-    <select class="form-control form-control-lg" name="Deporte" id="validationCustom03" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
-        <option value="">SELECCIONA DEPORTE </option>
-        <option value="Ajedrez">Ajedrez</option>
-        <option value="Atetismo">Atletismo</option>
-        <option value="District Committee">District Committee</option>
-        <option value="Meeting">Meeting</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    <div class="invalid-feedback">
-         proporciona una Categoria.
-    </div> 
-</select>
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div> --}}
-{{-- TERMINA CÓDIGO DE DEPORTES Y MODALIDAD DE PRUEBA --}}
-
-{{--  <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
-   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
-  <div class="invalid-feedback">
-      Please provide an activity.
-  </div>
-  {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> --}}
-
-{{-- comment --}}
-{{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04">{{ 'Modalidad' }}</label>
-    <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
-</div>
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>
-</div> --}}
-
-{{-- comment --}}
-
-{{-- SELECT DINAMICO ORIGINAL --}}
-
-{{-- 
-<div class="row">
-    <div class="col-md-6 mb-3">
-        <label for="validationCustom03">DEPORTE:</label>
-        <select class="form-control form-control-lg" name="category" id="validationCustom03" onchange="ChangecatList()" required>
-          <option value="">SELECCIONA DEPORTE </option>
-          <option value="Ajedrez">Ajedrez</option>
-          <option value="Atetismo">Atletismo</option>
-          <option value="District Committee">District Committee</option>
-          <option value="Meeting">Meeting</option>
-          <option value="Other Category">Other Category</option>
-          <option value="Professional Conference">Professional Conference</option>
-          <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-          <option value="Pupil Services">Pupil Services</option>
-        </select>
-      <div class="invalid-feedback">
-          Please provide a category.
-      </div>
-    </div>
-    <div class="col-md-6 mb-3">
-        <label for="validationCustom04">Modalidad:</label>
-       <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
-      <div class="invalid-feedback">
-          Please provide an activity.
-      </div>
-    </div>
-  </div>
-
- --}}
-{{-- TERMINA SELECT ORIGINAL --}}
-
-  
 
   {{-- termina prueba --}}
 
@@ -313,7 +179,7 @@
 </div>
 
 {{-- DEPORTE --}}
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="Deporte" class="control-label">{{ 'Deporte' }}</label>
     <select name="Deporte" class="form-control" id="Deporte" >
     @foreach (json_decode('{"SELECCIONE":"Seleccione Deporte", "AJEDREZ":"Ajedrez", "ATLETISMO":"Atletismo", "BALONCESTO":"Baloncesto", "BALONCESTO3x3":"Baloncesto3x3","BEISBOL":"Beisbol", "BOXEO":"Boxeo", "CICLISMO":"Ciclismo", "FUTBOL5x5":"Futbol5x5", "FUTBOLASOCIACION":"Futbol_Asociacion", "SOFTBOL":"Softbol", "TAEKWONDO":"Taekwondo","VOLEIBOL":"Voleibol"}', true) as $optionKey => $optionValue)
@@ -321,21 +187,66 @@
     @endforeach
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
-
-{{-- RAMA --}}
-<div class="form-group {{ $errors->has('Rama') ? 'has-error' : ''}}">
-    <label for="Rama" class="control-label">{{ 'Rama' }}</label>
-    <select name="Rama" class="form-control" id="Rama" >
-    @foreach (json_decode('{"femenil":"Femenil", "varonil":"Varonil", "mixto": "Mixto"}', true) as $optionKey => $optionValue)
-        <option value="{{ $optionKey }}" {{ (isset($registro->Rama) && $registro->Rama == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
-    @endforeach
+</div> --}}
+<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+    <label for="" class="control-label">{{ 'Deporte' }}</label>
+    <select class="form-control" name="Deporte" id="" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
+        <option value="">SELECCIONA DEPORTE </option>
+        <option value="ajedrez">Ajedrez</option>
+        <option value="atletismo">Atletismo</option>
+        <option value="Baloncesto">Baloncesto</option>
+        <option value="Baloncesto3x3">Baloncesto 3X3</option>
+        <option value="Beisbol">Béisbol</option>
+        <option value="Boxeo">Boxeo</option>
+        <option value="Ciclismo">Ciclismo</option>
+        <option value="Futbol5x5">Futbol5x5</option>
+        <option value="Futbol_Asociacion">Futbol Asociación</option>
+        <option value="Softbol">Sóftbol</option>
+        <option value="Taekwondo">Taekwondo</option>
+        <option value="Voleibol">Voleibol</option>
+        
+      </select>
+    <div class="invalid-feedback">
+         proporciona una Categoria.
+    </div>
 </select>
-    {!! $errors->first('Rama', '<p class="help-block">:message</p>') !!}
+    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
 </div>
-
 {{-- MODALIDAD --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+
+{{-- MODALIDAD AJEDREZ --}}
+
+<div class="form-group ajedrez Individual EquipoMixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="Modalidad" class="form-control" id="Modalidad" >
+        <option value="Individual" >Individual</option>
+        <option value="EquipoMixto" >EquipoMixto</option>
+
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> 
+{{-- MODALIDAD ATLETISMO --}}
+<div class="form-group atletismo Velocidad Salto_Sin_Impulso Relevo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="Modalidad" class="form-control" id="Modalidad"  >
+        <option value="Velocidad" >Velocidad</option>
+        <option value="Salto_Sin_Impulso" >Salto sin impulso</option>
+        <option value="Relevo_Mixto" >400Metros</option>
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> 
+
+{{-- MODALIDAD FUT5X5 --}}
+<div class="form-group Futbol5x5 Femenil Varonil Equipo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
+    <select name="Modalidad" class="form-control" id="Modalidad"  >
+        <option value="Femenil" >Femenil</option>
+        <option value="Varonil" >Varonil</option>
+        <option value="Equipo_Mixto" >Equipo Mixto</option>
+</select> 
+    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
+</div> 
+{{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <div class="radio">
     <label><input name="Modalidad" type="radio" value="1" {{ (isset($registro) && 1 == $registro->Modalidad) ? 'checked' : '' }}> Si</label>
@@ -344,7 +255,20 @@
     <label><input name="Modalidad" type="radio" value="0" @if (isset($registro)) {{ (0 == $registro->Modalidad) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
 </div>
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
+</div> --}}
+
+{{-- RAMA --}}
+<div class="form-group  RAMA {{ $errors->has('Rama') ? 'has-error' : ''}}">
+    <label for="Rama" class="control-label">{{ 'Rama' }}</label>
+    <select name="Rama" class="form-control" id="Rama" >
+    @foreach (json_decode('{"femenil":"Femenil", "varonil":"Varonil"}', true) as $optionKey => $optionValue)
+        <option value="{{ $optionKey }}" {{ (isset($registro->Rama) && $registro->Rama == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
+    @endforeach
+</select>
+    {!! $errors->first('Rama', '<p class="help-block">:message</p>') !!}
+</div>
+
+ 
 
 {{-- CATEGORÍA --}}
 <div class="form-group {{ $errors->has('Categoria') ? 'has-error' : ''}}">

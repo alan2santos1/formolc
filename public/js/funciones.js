@@ -1,23 +1,3 @@
-//ESCONDER O MOSTRAR UN DIV
-$(document).ready(function() {
-    //Select para mostrar e esconder divs
-    $('#SelectOptions').on('change',function(){
-        var SelectValue='.'+$(this).val();
-        $('.DivPai div').hide();
-        $(SelectValue).toggle();
-    });
-});
-//TERMINA 
-
-
-//EMPIEZA ESCONDER O MOSTRAR DIV
-$('#options').on('change', function (e) {
-    $('.option').hide();
-    $('#option-' + e.target.value).show();
-});
-//TERMINA 
-
-
 //CALCULAR EDAD
 $(function(){
     $('#birthday').on('change', calcularEdad);
@@ -78,10 +58,10 @@ function ChangecatList() {
 
 
 //
-$('#deportes1').on('change', function (e) {
+/* $('#deportes1').on('change', function (e) {
     $('.deporte1').hide();
     $('#deporte1-' + e.target.value).show();
-});
+}); */
 
 //
 
@@ -108,3 +88,57 @@ $(function() {
     });
   });
  */
+
+$().ready(function(){
+	$('#cambiar').change(function(e){
+		if($('#cambiar').val()==0){//muestro el div1 y oculto los demas
+			$('#apDiv0').show();
+			$('#apDiv1').hide();
+			$('#apDiv2').hide();
+			$('#apDiv3').hide();
+		}else if($('#cambiar').val()==1){//muestro el div2 y oculto los demas
+			$('#apDiv0').hide();
+			$('#apDiv1').show();
+			$('#apDiv2').hide();
+			$('#apDiv3').hide();
+		}else if($('#cambiar').val()=="Futbol5x5"){//muestro el div3 y oculto los demas
+			$('#apDiv0').hide();
+			$('#apDiv1').hide();
+			$('#apDiv2').show();
+			$('#apDiv3').hide();
+		}else if($('#cambiar').val()=="Voleibol"){//muestro el div3 y oculto los demas
+			$('#apDiv0').hide();
+			$('#apDiv1').hide();
+			$('#apDiv2').hide();
+			$('#apDiv3').show();
+		}
+	});
+}) 
+
+//
+
+/* $().ready(function(){
+	$('#cambiarDeporte').change(function(e){
+		if($('#cambiarDeporte').val()==0){//muestro el div1 y oculto los demas
+			$('#Ajedrez0').show();
+			$('#Atletismo1').hide();
+			$('#Fut5x5_2').hide();
+			$('#Voleibol3').hide();
+		}else if($('#cambiarDeporte').val()=="Ajedrez"){//muestro el div2 y oculto los demas
+			$('#Ajedrez0').hide();
+			$('#Atletismo1').show();
+			$('#Fut5x5_2').hide();
+			$('#Voleibol3').hide();
+		}else if($('#cambiarDeporte').val()=="Atletismo"){//muestro el div3 y oculto los demas
+			$('#Ajedrez0').hide();
+			$('#Atletismo1').hide();
+			$('#Fut5x5_2').show();
+			$('#Voleibol3').hide();
+		}else if($('#cambiarDeporte').val()==3){//muestro el div3 y oculto los demas
+			$('#Ajedrez0').hide();
+			$('#Atletismo1').hide();
+			$('#Fut5x5_2').hide();
+			$('#Voleibol3').show();
+		}
+	});
+}) */
