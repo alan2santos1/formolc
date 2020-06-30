@@ -188,7 +188,9 @@
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
 </div> --}}
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+
+{{-- original 1 --}}
+{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
     <label for="" class="control-label">{{ 'Deporte' }}</label>
     <select class="form-control" name="Deporte" id="" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
         <option value="">SELECCIONA DEPORTE </option>
@@ -211,12 +213,54 @@
     </div>
 </select>
     {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
+</div> --}}
+{{-- termina original 1 --}}
+
+
+{{-- código de registros1 --}}
+<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
+    <label for="cambiar" class="control-label">Selecciona un Deporte</label>
+    <select  class="form-control" id="cambiar" name="Deporte" value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}">
+       <option value="">Selecciona una opción</option>
+        <option value="ajedrez">Ajedrez</option>
+        <option value="atletismo">Atletismo</option>
+        <option value="Futbol5x5">Futbol 5x5</option>
+        <option value="Taekwondo">Taekwondo</option>
+        <option value="Voleibol">Voleibol</option>
+   
+    </select>
+    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
+   </div>
+   {{-- código de registros1 --}}
+
+   {{-- modalidad registros1 --}}
+
+   <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="Ajedrez_" style="display:none" >
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+     <select class="cambiar form-control" name="Modalidad" id="Modalidad">
+     <option value="Individual">Individual</option>
+     <option value="Mixto">Mixto</option>
+   </select>
+ </div>
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="Atletismo_" style="display:none">    
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+   <select class="cambiar form-control" name="Modalidad" id="Modalidad">
+     <option value="Velocidad">Velocidad</option>
+     <option value="Salto sin impulso">Salto sin impulso</option>
+     <option value="Relevo mixto">Relevo mixto</option>
+   </select>
+ </div>
+
+   {{-- Modalidad registros 1 --}}
+   
+   
+
 {{-- MODALIDAD --}}
 
 {{-- MODALIDAD AJEDREZ --}}
 
-<div class="form-group ajedrez Individual EquipoMixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+{{-- <div class="form-group ajedrez Individual EquipoMixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <select name="Modalidad" class="form-control" id="Modalidad" >
         <option value="Individual" >Individual</option>
@@ -224,9 +268,9 @@
 
 </select> 
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
+</div>  --}}
 {{-- MODALIDAD ATLETISMO --}}
-<div class="form-group atletismo Velocidad Salto_Sin_Impulso Relevo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+{{-- <div class="form-group atletismo Velocidad Salto_Sin_Impulso Relevo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <select name="Modalidad" class="form-control" id="Modalidad"  >
         <option value="Velocidad" >Velocidad</option>
@@ -235,9 +279,9 @@
 </select> 
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
 </div> 
-
+ --}}
 {{-- MODALIDAD FUT5X5 --}}
-<div class="form-group Futbol5x5 Femenil Varonil Equipo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
+{{-- <div class="form-group Futbol5x5 Femenil Varonil Equipo_Mixto box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <select name="Modalidad" class="form-control" id="Modalidad"  >
         <option value="Femenil" >Femenil</option>
@@ -245,7 +289,7 @@
         <option value="Equipo_Mixto" >Equipo Mixto</option>
 </select> 
     {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
+</div>  --}}
 {{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
     <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
     <div class="radio">

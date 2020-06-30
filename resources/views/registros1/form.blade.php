@@ -1,239 +1,65 @@
-
-
-<br><br>
-
-    {{-- Deportes --}}
-    
-<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="cambiar" class="control-label">{{ ' Selec Deporte' }}</label>
-    <select class="form-control form-control-lg" name="Deporte" id="cambiar" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
-        <option value="Deporte">DEPORTE </option>
-        <option value="Ajedrez">Ajedrez</option>
-        <option value="Atletismo">Atletismo</option>
-        <option value="Futbol5x5">Futbol 5x5</option>
-        <option value="Voleibol">Voleibol</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    <div class="invalid-feedback">
-         proporciona una Categoria.
-    </div>
-</select> 
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div> 
-
-{{-- Ajedrez --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv0" style="display:none">
-    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
-    <select name="cambiar" class="form-control" id="cambiar" >
-        <option value="Individual" >Individual</option>
-        <option value="Equipo Mixto" >Equipo Mixto</option>
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>  
-
-{{-- Atletismo --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="" style="display:none">
-    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
-    <select name="cambiar" class="form-control" id="cambiar" >
-        <option value="Velocidad" >Velocidad</option>
-        <option value="Salto sin impulso" >Salto sin impulso</option>
-        <option value="Relevo Mixto" >Relevo Mixto</option>
-
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>
-
-{{-- Fut5x5 --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv2" style="display:none">
-    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
-    <select name="cambiar" class="form-control" id="cambiar" >
-        <option value="Femenil" >Femenil</option>
-        <option value="Varonil" >Varonil</option>
-        <option value=" Mixto" >Mixto</option>
-
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div>
-
-{{-- Voleibol --}}
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}"  id="apDiv3" style="display:none">
-    <label for="cambiar" class="control-label">{{ 'Modalidad' }}</label>
-    <select name="cambiar" class="form-control" id="cambiar" >
-        <option value="Femenil" >Femenil1</option>
-        <option value="Varonil" >Varonil1</option>
-        <option value=" Mixto" >Mixto1</option>
-
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
-
-   {{--  <div id="apDiv0" style="display:none">div0</div>
-    <div id="apDiv3" style="display:none">div1</div>
-    <div id="apDiv3" style="display:none">div2</div>
-    <div id="apDiv3" style="display:none">div3</div> --}}
-
-
-
-{{-- <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
-    <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> --}}
-{{-- EMPIEZA ESCONDER BOOTSTRAP --}}
-{{--<div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="validationCustom03" class="control-label">{{ 'Deporte' }}</label>
-    <select class="form-control form-control-lg" name="Deporte" id="validationCustom03" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
-        <option value="">SELECCIONA DEPORTE </option>
-        <option value="Ajedrez">Ajedrez</option>
-        <option value="Atetismo">Atletismo</option>
-        <option value="District Committee">District Committee</option>
-        <option value="Meeting">Meeting</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    <div class="invalid-feedback">
-         proporciona una Categoria.
-    </div>
-</select>
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
-
-<div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad' }}</label>
-    <select class="form-control form-control-lg" name="Modalidad" id="validationCustom04"  required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}">
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-    <div class="invalid-feedback">
-        Please provide an activity.
-    </div>
-</div>
- --}}
-{{-- TERMINA ESCONDER BOOTSTRAP --}}
-
-
-{{-- <div class="col-md-6 mb-3">
-    <label for="validationCustom04">Modalidad:</label>
-   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required></select>
-  <div class="invalid-feedback">
-      Please provide an activity.
-  </div>
-</div>
-</div> --}}
-{{-- <div class="col-md-6 mb-3 {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="validationCustom04" class="control-label">{{ 'Modalidad123' }}</label>
-   <select class="form-control form-control-lg" id="validationCustom04" name="activity" required value="{{ isset($registro->Modalidad) ? $registro->Modalidad : ''}}"></select>
-  <div class="invalid-feedback">
-      Please provide an activity.
-  </div>
-  {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> --}}
-
-
-{{-- deporte y modalidad funcional --}}
-
-{{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="" class="control-label">{{ 'Deporte' }}</label>
-    <select class="form-control form-control-lg" name="Deporte" id="" onchange="ChangecatList()" required value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" >
-        <option value="">SELECCIONA DEPORTE </option>
-        <option value="red">Ajedrez</option>
-        <option value="atletismo">Atletismo</option>
-        <option value="blue">TAEKWONDO</option>
-        <option value="atletismo1">prueba</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    <div class="invalid-feedback">
-         proporciona una Categoria.
-    </div>
-</select>
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group red box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
-    <select name="Modalidad" class="form-control" id="Modalidad" >
-        <option value="red" >azul</option>
-        <option value="red" >verde</option>
-        <option value="red" >rojas</option>
-        <option value="red" >Cintas negras</option>
-
-</select> 
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
- --}}{{-- Ateltismo --}}
-{{-- <div class="form-group atletismo Relevos _100Metros _400Metros box {{ $errors->has('Modalidad') ? 'has-error' : ''}}">
-    <label for="Modalidad" class="control-label">{{ 'Modalidad' }}</label>
-    <select  multiple class="form-control" >
-        <option value="Relevos" >Relevos</option>
-        <option value="_100Metros" >100Metros</option>
-        <option value="_400Metros" >400Metros</option>
-</select>
-    {!! $errors->first('Modalidad', '<p class="help-block">:message</p>') !!}
-</div> 
- --}}{{-- Termina deporte funcional --}}
-
-{{-- <div>
-    <select>
-        <option>Choose Color</option>
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="blue">Blue</option>
-    </select>
-</div> --}}
-
-{{-- <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-<div class="green box">You have selected <strong>green option</strong> so i am here</div>
-<div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
- --}}
- 
- {{-- <label class="wrapper" for="states">This label is stacked above the select</label>
- <div class="button dropdown"> 
-   <select id="colorselector">
-      <option value="red">Red</option>
-      <option value="yellow">Yellow</option>
-      <option value="blue">Blue</option>
-   </select>
- </div>  --}}
+{{-- inicia código esconder y mostrar --}}
 
  {{-- <div class="form-group {{ $errors->has('Deporte') ? 'has-error' : ''}}">
-    <label for="" class="control-label">{{ 'Deporte' }}</label>
-    <select class="form-control form-control-lg" name="Deporte" value="{{ isset($registro->Deporte) ? $registro->Deporte : ''}}" id="colorselector">
-        <option value="">SELECCIONA DEPORTE </option>
-        <option value="red">Ajedrez</option>
-        <option value="yellow">Atletismo</option>
-        <option value="blue">TAEKWONDO</option>
-        <option value="Meeting">Meeting</option>
-        <option value="Other Category">Other Category</option>
-        <option value="Professional Conference">Professional Conference</option>
-        <option value="Professional Workshop / Training">Professional Workshop / Training</option>
-        <option value="Pupil Services">Pupil Services</option>
-      </select>
-    <div class="invalid-feedback">
-         proporciona una Categoria.
-    </div>
-</select>
-    {!! $errors->first('Deporte', '<p class="help-block">:message</p>') !!}
-</div> --}}
-
- {{-- <div class="output">
-   <div id="red" class="colors red">  “Good artists copy, great artists steal” Pablo Picasso</div>
-
-   <div id="yellow" class="colors yellow"> 
-     <select>
-       <option> Individual</option>
-       <option> Mixto</option>
-     </select>
-     
+    <label for="cambiar" class="control-label">Selecciona un Deporte</label>
+    <select  class="form-control" id="cambiar" name="cambiar" value="{{ isset($registros1->Deporte) ? $registros1->Deporte : ''}}">
+       <option value="">Selecciona una opción</option>
+        <option value="ajedrez">Ajedrez</option>
+        <option value="atletismo">Atletismo</option>
+        <option value="Futbol5x5">Futbol 5x5</option>
+        <option value="Taekwondo">Taekwondo</option>
+        <option value="Voleibol">Voleibol</option>
+   
+    </select>
    </div>
-   <div id="blue" class="colors blue"> “If I don't have red, I use blue” Pablo Picasso</div>
- </div> --}}
 
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="Ajedrez_" style="display:none" >
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+     <select class="cambiar form-control" name="cambiar" id="Modalidad">
+     <option value="Individual">Individual</option>
+     <option value="Mixto">Mixto</option>
+   </select>
+ </div>
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="Atletismo_" style="display:none">    
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+   <select class="cambiar form-control" name="cambiar" id="Modalidad">
+     <option value="Velocidad">Velocidad</option>
+     <option value="Salto sin impulso">Salto sin impulso</option>
+     <option value="Relevo mixto">Relevo mixto</option>
+   </select>
+ </div>
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="futbol5x5_" style="display:none">    
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+   <select class="cambiar form-control" name="cambiar" id="Modalidad">
+     <option value="Femenil">Femenil</option>
+     <option value="Varonil">Varonil</option>
+     <option value="Equipo mixto">Equipo mixto</option>
+   </select>
+ </div> 
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="taekwondo_" style="display:none">
+    <label for="Modalidad" class="control-label">{{ 'Selecciona cintas:' }}</label>
+   <select class="cambiar form-control" name="cambiar" id="Modalidad">
+     <option value="Blancas-Amarillas">Blancas-Amarillas</option>
+     <option value="Verdes-Azules">Verdes-Azules</option>
+     <option value="Rojas-Negras">Rojas-Negras</option>
+   </select>
+ </div>
+
+ <div class="form-group {{ $errors->has('Modalidad') ? 'has-error' : ''}}" id="voleibol_" style="display:none">
+    <label for="Modalidad" class="control-label">{{ 'Modalidad:' }}</label>
+   <select class="cambiar form-control" name="cambiar" id="Modalidad">
+     <option value="Femenil">Femenil</option>
+     <option value="Varonil">Varonil</option>
+     <option value="Equipo mixto">Equipo mixto</option>
+   </select>
+ </div>  --}}
+{{-- termina mostrar y esconder --}}
+
+ 
 {{-- inicia código original --}}
 
 

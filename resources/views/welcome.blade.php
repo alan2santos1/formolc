@@ -82,21 +82,27 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Olimpiada Comunitaria
                 </div>
 
                 <div class="links">
                     <a href="http://localhost:8888/registrate/public/registros/create">Registrate</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    {{-- <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                 </div>
             </div>
         </div>
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+               crossorigin="anonymous">
+</script>
+
         
     </body> 
 </html>
